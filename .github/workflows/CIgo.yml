@@ -3,8 +3,7 @@
 
 name: Go
 env:
-  secrets: 
-    DBA_USER_PASSWORD: ${{ secrets.DBA_USER_PASSWORD }}
+  DBA_USER_PASSWORD: ${{ secrets.DBA_USER_PASSWORD }}
 
 on:
   push:
