@@ -14,15 +14,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
       strategy:
-      matrix:
-        go_version: ['1.17','1.18','>=1.20']
+        matrix:
+          go_version: ['1.17','1.18','>=1.20']
     steps:
     - uses: actions/checkout@v3
 
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go_version: ${{ matrix.go_version }}
+        go-version: ${{ matrix.go_version }}
       
     - name: Build DB
       run: docker-compose build
