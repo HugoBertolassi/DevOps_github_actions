@@ -3,9 +3,9 @@ services:
   postgres:
     image: "postgres"
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root      
+      - POSTGRES_USER=${{ secrets.DBA_USER_PASSWORD }}
+      - POSTGRES_PASSWORD=${{ secrets.DBA_USER_PASSWORD }}
+      - POSTGRES_DB=${{ secrets.DBA_USER_PASSWORD }}     
     ports:
       - "5432:5432"
     volumes:
