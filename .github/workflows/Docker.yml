@@ -1,0 +1,16 @@
+name: docker
+
+on:
+  workflow_call:
+
+jobs:
+
+  docker:
+    runs-on: ubuntu-latest
+   
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Docker build
+      uses: actions/setup-go@v4
+    
