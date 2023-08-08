@@ -14,6 +14,12 @@ jobs:
     - name: Setup Docker build
       uses: actions/setup-go@v4
 
+    - name: use artifact
+      uses: actions/download-artifact@v3
+      with:
+        # nome do progrma vem do nome do articatc criado no CIgo.yml
+        name: programa
+
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v2
       with:
