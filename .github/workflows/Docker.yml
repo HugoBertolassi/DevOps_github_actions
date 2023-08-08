@@ -18,7 +18,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         # nome do progrma vem do nome do articatc criado no CIgo.yml
-        name: programa
+        name: programa em go
 
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v2
